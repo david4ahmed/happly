@@ -5,9 +5,10 @@
     <!--<Contact/>-->
     <!--<ComfortZone/>-->
     <!--<ComplimentFriends/>-->
+    <ComplimentUser/>
     <!--<ReflectBehavior/>-->
     <!--<RandomMedia/>-->
-    <Statistics/>
+    <!--<Statistics/>-->
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import Contact from './components/Contact'
 import ComfortZone from './components/ComfortZone'
 import ComplimentFriends from './components/ComplimentFriends'
+import ComplimentUser from './components/ComplimentUser'
 import ReflectBehavior from './components/ReflectBehavior'
 import RandomMedia from './components/RandomMedia'
 import Statistics from './components/Statistics'
@@ -27,6 +29,7 @@ export default {
     Contact,
     ComfortZone,
     ComplimentFriends,
+    ComplimentUser,
     ReflectBehavior,
     Statistics
   }
