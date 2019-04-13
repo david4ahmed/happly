@@ -19,7 +19,7 @@ export default {
 };
 </script>
 
-<style scope>
+<style scoped>
 div {
   display: flex;
   margin: auto;
