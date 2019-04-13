@@ -2,9 +2,11 @@
   <div id="app">
     <!--<img alt="Vue logo" src="./assets/logo.png">-->
     <!--<HelloWorld msg="Welcome to Your Vue.js App"/>-->
-    <Contact/>
+    <!--<Contact/>-->
     <!--<ComfortZone/>-->
     <!--<Compliment/>-->
+    <!--<ReflectBehavior/>-->
+    <RandomMedia/>
   </div>
 </template>
 
@@ -13,6 +15,8 @@ import HelloWorld from './components/HelloWorld.vue'
 import Contact from './components/Contact'
 import ComfortZone from './components/ComfortZone'
 import Compliment from './components/Compliment'
+import ReflectBehavior from './components/ReflectBehavior'
+import RandomMedia from './components/RandomMedia'
 
 export default {
   name: 'app',
@@ -20,7 +24,9 @@ export default {
     HelloWorld,
     Contact,
     ComfortZone,
-    Compliment
+    Compliment,
+    ReflectBehavior,
+    RandomMedia
   }
 }
 </script>
