@@ -4,9 +4,10 @@
     <!--<HelloWorld msg="Welcome to Your Vue.js App"/>-->
     <!--<Contact/>-->
     <!--<ComfortZone/>-->
-    <!--<Compliment/>-->
+    <!--<ComplimentFriends/>-->
     <!--<ReflectBehavior/>-->
-    <RandomMedia/>
+    <!--<RandomMedia/>-->
+    <Statistics/>
   </div>
 </template>
 
@@ -14,9 +15,10 @@
 import HelloWorld from './components/HelloWorld.vue'
 import Contact from './components/Contact'
 import ComfortZone from './components/ComfortZone'
-import Compliment from './components/Compliment'
+import ComplimentFriends from './components/ComplimentFriends'
 import ReflectBehavior from './components/ReflectBehavior'
 import RandomMedia from './components/RandomMedia'
+import Statistics from './components/Statistics'
 
 export default {
   name: 'app',
@@ -24,9 +26,9 @@ export default {
     HelloWorld,
     Contact,
     ComfortZone,
-    Compliment,
+    ComplimentFriends,
     ReflectBehavior,
-    RandomMedia
+    Statistics
   }
 }
 </script>

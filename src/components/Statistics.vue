@@ -1,27 +1,27 @@
 <template>
     <div>
         <div class="title">
-            How about trying something new?
-        </div>
-        <div class="sub-title">
-            Give compliments to others!
+            See what other people did!
         </div>
 
         <div>
-            <img class="meme" src="../assets/prototype/instagram.png">
+            They sent 94673 say hi to their friends!
         </div>
 
-        <textarea class="message"></textarea>
+        <div>
+            They sent 51266 compliments to others!
+        </div>
 
-        <button class="send">Send</button>
-
+        <div>
+            9237 users tried new thing to break comfort zone!
+        </div>
     </div>
 </template>
 
 
 <script>
     export default {
-        name: "Compliment"
+        name: "Statistics"
     }
 </script>
 
