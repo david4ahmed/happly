@@ -1,5 +1,5 @@
 <template>
-  <div id="slider" class="slider" @mousemove="mouseMoving" @mouseleave="stopDrag">
+  <div id="slider" class="slider" v-bind:class="getCurrentComponentId()" @mousemove="mouseMoving" @mouseleave="stopDrag">
     <div class="slider-cards" :style="`transform: translate3d(${cardsX}px,0,0)`">
       <div @mousedown="startDrag"
            @mouseup="stopDrag"
@@ -102,6 +102,15 @@ export default {
         const targetX = this.initialCardsX + dragAmount;
         this.cardsX = targetX;
       }
+    },
+    getCurrentComponentId(){
+      switch (this.selectedIndex) {
+        case 0: return "Main";
+        case 1: return "Feel";
+        case 2: return "Spirit";
+        case 3: return "Mindful";
+        case 4: case 5: case 6: return "Challenge";
+      }
     }
   }
 }
@@ -117,6 +126,23 @@ export default {
     width: 360px;
     height: 685px;
   }
+
+  .Main {
+    background-color: rgba(0, 255, 208, 0.06);
+  }
+  .Feel {
+    background-color: rgba(116, 104, 93, 0.26);
+  }
+  .Spirit {
+    background-color: rgba(0, 44, 180, 0.3);
+  }
+  .Mindful {
+    background-color: rgba(251, 176, 1, 0.1);
+  }
+  .Challenge {
+    background-color: rgba(114, 181, 118, 0.15);
+  }
+
 
   .slider-cards {
     position: relative;
