@@ -118,7 +118,7 @@ export default {
     },
     goLeft(){
       const cardWidth = 330;
-      this.selectedIndex = Math.min(this.selectedIndex-1, 7 - 1);
+      this.selectedIndex = Math.max(this.selectedIndex-1, 7 - 1);
       tweenlite.to(this, 0.3, {cardsX: -this.selectedIndex * cardWidth});
     },
     goRight(){
