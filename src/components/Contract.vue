@@ -4,7 +4,7 @@
         <div class="sub-title">Choose an adjective to positively describe yourself with</div>
 
         <div class="sms">
-            <a class="sms" href="tel:+13127414309">
+            <a class="sms" href="sms:+13127414309">
                 <img src="../assets/sms.png" height="50" width="50">
             </a>
         </div>
