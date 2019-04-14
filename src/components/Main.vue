@@ -1,5 +1,6 @@
 <template>
     <div class="background">
+        <img class="loading" src="../assets/loading.gif" height="50" width="50">
     </div>
 </template>
 
@@ -16,5 +17,11 @@
         background-size: contain;
         width: 100%;
         height: 100%;
+    }
+    .loading {
+        position: absolute;
+        left: 125px;
+        top: 112px;
+        user-select: none;
     }
 </style>

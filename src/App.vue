@@ -25,6 +25,24 @@
         <Mindful/>
       </div>
 
+       <div @mousedown="startDrag"
+           @mouseup="stopDrag"
+           class="slider-card">
+        <Callenge/>
+      </div>
+
+      <div @mousedown="startDrag"
+           @mouseup="stopDrag"
+           class="slider-card">
+        <OnlineCallenge/>
+      </div>
+
+      <div @mousedown="startDrag"
+           @mouseup="stopDrag"
+           class="slider-card">
+        <OfflineCallenge/>
+      </div>
+
     </div>
   </div>
 </template>
@@ -36,6 +54,9 @@ import Main from "./components/Main.vue";
 import Feel from "./components/Feel.vue";
 import Spirit from "./components/Spirit.vue";
 import Mindful from "./components/Mindful.vue";
+import Callenge from "./components/Callenge.vue";
+import OnlineCallenge from "./components/OnlineCallenge.vue";
+import OfflineCallenge from "./components/OfflineCallenge.vue";
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 
@@ -47,7 +68,10 @@ export default {
     Main,
     Feel,
     Spirit,
-    Mindful
+    Mindful,
+    Callenge,
+    OnlineCallenge,
+    OfflineCallenge
   },
   data: function () {
     return {
@@ -69,7 +93,7 @@ export default {
 
       const cardWidth = 330;
       const nearestSlide = - Math.round(this.cardsX / cardWidth);
-      this.selectedIndex = Math.min(Math.max(0, nearestSlide), 4 - 1);
+      this.selectedIndex = Math.min(Math.max(0, nearestSlide), 7 - 1);
       tweenlite.to(this, 0.3, {cardsX: -this.selectedIndex * cardWidth});
     },
     mouseMoving (e) {
