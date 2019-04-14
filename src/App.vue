@@ -45,6 +45,12 @@
         <OfflineCallenge/>
       </div>
 
+      <div @mousedown="startDrag"
+           @mouseup="stopDrag"
+           class="slider-card">
+        <Contract/>
+      </div>
+
     </div>
 
     <div class="right_tap" @click="goRight"></div>
@@ -61,6 +67,7 @@ import Mindful from "./components/Mindful.vue";
 import Callenge from "./components/Callenge.vue";
 import OnlineCallenge from "./components/OnlineCallenge.vue";
 import OfflineCallenge from "./components/OfflineCallenge.vue";
+import Contract from "./components/Contract.vue";
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 
@@ -75,7 +82,8 @@ export default {
     Mindful,
     Callenge,
     OnlineCallenge,
-    OfflineCallenge
+    OfflineCallenge,
+    Contract
   },
   data: function () {
     return {
@@ -97,7 +105,7 @@ export default {
 
       const cardWidth = 330;
       const nearestSlide = - Math.round(this.cardsX / cardWidth);
-      this.selectedIndex = Math.min(Math.max(0, nearestSlide), 7 - 1);
+      this.selectedIndex = Math.min(Math.max(0, nearestSlide), 8 - 1);
       tweenlite.to(this, 0.3, {cardsX: -this.selectedIndex * cardWidth});
     },
     mouseMoving (e) {
@@ -123,7 +131,7 @@ export default {
     },
     goRight(){
       const cardWidth = 330;
-      this.selectedIndex = Math.min(this.selectedIndex+1, 7 - 1);
+      this.selectedIndex = Math.min(this.selectedIndex+1, 8 - 1);
       tweenlite.to(this, 0.3, {cardsX: -this.selectedIndex * cardWidth});
     }
   }
