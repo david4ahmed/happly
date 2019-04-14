@@ -1,5 +1,7 @@
 <template>
   <div id="slider" class="slider" v-bind:class="getCurrentComponentId()" @mousemove="mouseMoving" @mouseleave="stopDrag">
+    <div class="left_tap" @click="goLeft"></div>
+
     <div class="slider-cards" :style="`transform: translate3d(${cardsX}px,0,0)`">
       <div @mousedown="startDrag"
            @mouseup="stopDrag"
@@ -44,6 +46,8 @@
       </div>
 
     </div>
+
+    <div class="right_tap" @click="goRight"></div>
   </div>
 </template>
 
@@ -111,6 +115,16 @@ export default {
         case 3: return "Mindful";
         case 4: case 5: case 6: return "Challenge";
       }
+    },
+    goLeft(){
+      const cardWidth = 330;
+      this.selectedIndex = Math.min(this.selectedIndex-1, 7 - 1);
+      tweenlite.to(this, 0.3, {cardsX: -this.selectedIndex * cardWidth});
+    },
+    goRight(){
+      const cardWidth = 330;
+      this.selectedIndex = Math.min(this.selectedIndex+1, 7 - 1);
+      tweenlite.to(this, 0.3, {cardsX: -this.selectedIndex * cardWidth});
     }
   }
 }
@@ -143,7 +157,6 @@ export default {
     background-color: rgba(114, 181, 118, 0.15);
   }
 
-
   .slider-cards {
     position: relative;
     width: 5000px;
@@ -160,5 +173,21 @@ export default {
     border-radius: 12px;
     -webkit-box-shadow: 0px 60px 20px -20px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 23px 14px -17px rgba(0, 0, 0, 0.3);
+  }
+
+  .left_tap{
+    width: 30px;
+    height: 200px;
+    position: fixed;
+    top: calc(50% - 100px);
+    z-index: 99999;
+  }
+  .right_tap{
+    width: 30px;
+    height: 200px;
+    position: fixed;
+    top: calc(50% - 100px);
+    left: 330px;
+    z-index: 99999;
   }
 </style>
